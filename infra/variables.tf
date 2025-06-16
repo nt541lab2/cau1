@@ -11,7 +11,7 @@ variable "public_subnet_cidr" {
 }
 
 variable "ami_id" {
-  default = "ami-0ba4a5d6a5a8f4661" # Ubuntu 22.04 LTS (ap-southeast-1)
+  default = "ami-0fa377108253bf620"
 }
 
 variable "instance_type" {
