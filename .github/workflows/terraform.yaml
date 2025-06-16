@@ -27,12 +27,15 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
+      working-directory: ./infra
 
     - name: Terraform Format
       run: terraform fmt -check
+      working-directory: ./infra
 
     - name: Terraform Validate
       run: terraform validate
+      working-directory: ./infra
 
     - name: Terraform Plan
       run: terraform plan
@@ -45,4 +48,4 @@ jobs:
     - name: Run Checkov for security scan
       uses: bridgecrewio/checkov-action@master
       with:
-        directory: .
+        directory: ./infra
