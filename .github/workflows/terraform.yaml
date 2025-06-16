@@ -36,9 +36,11 @@ jobs:
 
     - name: Terraform Plan
       run: terraform plan
+      working-directory: ./infra
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
+      working-directory: ./infra
 
     - name: Run Checkov for security scan
       uses: bridgecrewio/checkov-action@master
